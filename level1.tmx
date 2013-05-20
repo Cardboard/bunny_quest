@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="14" tilewidth="16" tileheight="16">
+ <tileset firstgid="1" name="outdoors" tilewidth="16" tileheight="16">
+  <image source="outdoors.png" width="64" height="16"/>
+ </tileset>
+ <layer name="bg" width="32" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjZmBgYB7Fo3gUj+JRPOIw4wjHADGOBME=
+  </data>
+ </layer>
+ <layer name="fg" width="32" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMBCACQ9mIVKMGIxL30gHAF8YAEc=
+  </data>
+ </layer>
+ <objectgroup name="triggers" width="32" height="14" visible="0">
+  <object name="floor" x="0" y="192" width="512" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object x="16" y="144" width="16" height="16">
+   <properties>
+    <property name="player" value=""/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object x="0" y="0" width="16" height="192">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object x="496" y="0" width="16" height="192">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
