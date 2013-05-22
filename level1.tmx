@@ -1,36 +1,739 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" width="32" height="14" tilewidth="16" tileheight="16">
+<map version="1.0" orientation="orthogonal" width="64" height="36" tilewidth="16" tileheight="16">
  <tileset firstgid="1" name="outdoors" tilewidth="16" tileheight="16">
-  <image source="outdoors.png" width="64" height="16"/>
+  <image source="outdoors.png" width="128" height="48"/>
  </tileset>
- <layer name="bg" width="32" height="14">
+ <layer name="bg" width="64" height="36">
   <data encoding="base64" compression="zlib">
-   eJxjZmBgYB7Fo3gUj+JRPOIw4wjHADGOBME=
+   eJztlkEOhCAMRTEGNrP0/nd1FpqQDq1taQsZWfxkogj/PXF0TyntKysrK5NkqzK6y0j2t3p4uwOMfzmwd6BZI6KbZg1LDq9I3Guv53aI5M5XjirYWOr8gcyRBbmvzY1rOQzU+Q0ZU775gGBz1WOezktSQI9ydShVKG9wHHRSCC8tfjge+uU6kjqAPrTJ6ddbiwd6h/6h4/s3dETdm15+zr7hOmntF4yfSs0vYZTyS56dyNR7xIK9h3+EB21HT/5IV7AvNnfrONUDHpe8O6mu1g64c/byW+9ZKwfcuWbit3yevPvNyBzh4mlOSQ9vbg8vUSyjHGn4Ldf2Zuv14XV/ou+3ZD0tP3eN3i5Rrrj88PhTXwlLzx6O4p8xPe/df+DnOpH+/49mwLii3I1mHdVP8zxF/ndHfZ/N9D3L7blikxPlHjzU
   </data>
  </layer>
- <layer name="fg" width="32" height="14">
+ <layer name="fg" width="64" height="36">
   <data encoding="base64" compression="zlib">
-   eJxjYBgFo2AUjIJRMBCACQ9mIVKMGIxL30gHAF8YAEc=
+   eJztmNsKgzAMhr0Qtsmmu/H9X3UICqE0zamJnfaDgGgP+X9t2m0YOp1Opw0mcP3a484cHoxnJ9IA3QMfDzRjXuFdlDRgdWdC7mP9onzC8uq141rcYT+kNEo9WPc4mwVcP41jab6Dsz14JFGTFYmPsX9Nz6z6tflQfazPI4jI4UvM34IPFmZB2zGJjXf1jHikvkt0RMGtM1L+QTvEy4cNTHuupnrtMxw8PcjRgn7tvssds0Rt/ZKzQOl+ze/A+2wC55DkIRlXEpZzm4YaXqb1yZoPpo3yRuqHh3Yvcro4fmiAmkpzwHbUOk1zSZ9J1oJHzd049HC8nsFzic/S+oHNnxvTsu6o7xgbX6pdCtaH8865a7P13zfe+x+ch7qm+nNzLLXjvFvN3qqZh5tHzXYHkefphW4SQu7/wQgf0v+oWoiOHz8qFhGJ
   </data>
  </layer>
- <objectgroup name="triggers" width="32" height="14" visible="0">
-  <object name="floor" x="0" y="192" width="512" height="32">
+ <objectgroup name="triggers" width="64" height="36" visible="0">
+  <object name="blocker" x="16" y="144" width="96" height="16">
    <properties>
-    <property name="block" value="tblr"/>
+    <property name="block" value="tblr v"/>
    </properties>
   </object>
-  <object x="16" y="144" width="16" height="16">
+  <object name="playerstart" x="32" y="96" width="16" height="16">
    <properties>
     <property name="player" value=""/>
    </properties>
    <ellipse/>
   </object>
-  <object x="0" y="0" width="16" height="192">
+  <object name="leftwall" x="0" y="0" width="16" height="144">
    <properties>
     <property name="block" value="tblr"/>
    </properties>
   </object>
-  <object x="496" y="0" width="16" height="192">
+  <object name="rightwall" x="1008" y="0" width="16" height="544">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="112" y="160" width="80" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="192" y="144" width="144" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="336" y="160" width="112" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="496" y="160" width="96" height="16">
+   <properties>
+    <property name="block" value="tlr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="496" y="176" width="16" height="80">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="416" y="192" width="16" height="64">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="432" y="256" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="576" y="176" width="16" height="16">
+   <properties>
+    <property name="block" value="lr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="592" y="192" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="608" y="208" width="16" height="144">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="624" y="336" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="688" y="320" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="640" y="192" width="16" height="128">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="592" y="96" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="608" y="128" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="624" y="160" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="688" y="160" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="752" y="160" width="224" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="720" y="288" width="64" height="80">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="704" y="304" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="944" y="272" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="752" y="224" width="160" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="736" y="208" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="720" y="192" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="704" y="176" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="832" y="288" width="32" height="80">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="912" y="240" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="912" y="288" width="32" height="80">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="784" y="368" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="864" y="368" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="768" y="176" width="208" height="16">
+   <properties>
+    <property name="block" value="blr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="960" y="192" width="16" height="320">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="944" y="208" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="912" y="192" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="704" y="544" width="304" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="672" y="528" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="640" y="512" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="608" y="496" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="16" y="512" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="64" y="464" width="16" height="10">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="80" y="448" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="256" y="448" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="272" y="432" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="288" y="416" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="304" y="400" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="560" y="432" width="112" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="672" y="448" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="720" y="464" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="912" y="464" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="768" y="432" width="64" height="14">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="720" y="416" width="80" height="13">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="624" y="400" width="111" height="13">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="384" y="384" width="240" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="48" y="560" width="608" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="512" y="496" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="448" y="512" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="288" y="512" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="192" y="528" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="336" y="496" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="128" y="496" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="176" y="496" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="80" y="496" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="32" y="528" width="32" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="48" y="480" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="0" y="432" width="16" height="80">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="16" y="416" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="32" y="400" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="48" y="384" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="80" y="368" width="112" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="192" y="384" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="256" y="368" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="192" y="464" width="47" height="10">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="288" y="464" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="320" y="432" width="96" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="320" y="416" width="16" height="16">
+   <properties>
+    <property name="block" value="lr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="304" y="448" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="448" y="432" width="80" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="464" y="448" width="48" height="16">
+   <properties>
+    <property name="block" value="blr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="464" y="464" width="16" height="16">
+   <properties>
+    <property name="block" value="blr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="784" y="480" width="128" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="816" y="448" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="400" y="336" width="208" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="768" y="496" width="192" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="688" y="480" width="80" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="656" y="448" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="672" y="464" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="848" y="400" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="768" y="384" width="80" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="672" y="368" width="96" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="624" y="352" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="912" y="416" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="928" y="432" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="160" y="448" width="48" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="112" y="432" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="656" y="272" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="672" y="256" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="688" y="240" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="720" y="224" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="death" x="432" y="224" width="64" height="32">
+   <properties>
+    <property name="death" value=""/>
+   </properties>
+  </object>
+  <object name="death" x="784" y="320" width="48" height="48">
+   <properties>
+    <property name="death" value=""/>
+   </properties>
+  </object>
+  <object name="death" x="864" y="320" width="48" height="48">
+   <properties>
+    <property name="death" value=""/>
+   </properties>
+  </object>
+  <object name="death" x="64" y="544" width="592" height="16">
+   <properties>
+    <property name="death" value=""/>
+   </properties>
+  </object>
+  <object name="save" x="720" y="240" width="16" height="48">
+   <properties>
+    <property name="save" value="2"/>
+   </properties>
+  </object>
+  <object name="save" x="704" y="496" width="16" height="48">
+   <properties>
+    <property name="save" value="3"/>
+   </properties>
+  </object>
+  <object name="checkpoint" x="752" y="256" width="16" height="16">
+   <properties>
+    <property name="checkpoint" value="2"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="checkpoint" x="608" y="464" width="16" height="16">
+   <properties>
+    <property name="checkpoint" value="3"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="checkpoint" x="64" y="96" width="16" height="16">
+   <properties>
+    <property name="checkpoint" value="1"/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object name="blocker" x="608" y="400" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="704" y="416" width="16" height="14">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="752" y="432" width="16" height="14">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="16" y="304" width="288" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="304" y="320" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="336" y="336" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="352" y="352" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="368" y="368" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="288" y="352" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="352" y="368" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="368" y="384" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="384" y="400" width="16" height="11">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="32" y="224" width="112" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="0" y="256" width="16" height="48">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="160" y="256" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="192" y="272" width="160" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="354" y="289" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="368" y="304" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="384" y="320" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="wife" x="32" y="288" width="16" height="16">
+   <properties>
+    <property name="bunny" value="1"/>
+   </properties>
+  </object>
+  <object name="blocker" x="144" y="240" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="16" y="240" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="608" y="512" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="624" y="528" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="blocker" x="16" y="0" width="992" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="640" y="80" width="32" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="672" y="96" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="688" y="112" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="704" y="128" width="16" height="32">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="vault" x="576" y="64" width="64" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="576" y="80" width="16" height="16">
+   <properties>
+    <property name="block" value="tblr"/>
+   </properties>
+  </object>
+  <object name="vault" x="800" y="144" width="112" height="16">
+   <properties>
+    <property name="block" value="tblr v"/>
+   </properties>
+  </object>
+  <object name="blocker" x="432" y="176" width="16" height="16">
    <properties>
     <property name="block" value="tblr"/>
    </properties>
